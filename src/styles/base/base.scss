@@ -1,0 +1,87 @@
+.box-card{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:0;
+  min-height:calc(100vh - 110px);
+  :deep(.el-card__header){
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    height:100%;
+    padding:15px 20px;
+    border-bottom:none;
+    span{
+      font-size:18px;
+      font-weight:bold;
+      padding-left:15px;
+      position: relative;
+      &::before{
+        content:"";
+        display:block;
+        width:5px;
+        height:20px;
+        background-color: #4e88f3;
+        position: absolute;
+        left: 0;
+        border-radius:25px;
+      }
+    }
+    u{
+      font-size:14px;
+      color:red;
+      text-decoration: none;
+      margin-left:15px;
+    }
+  }
+  &.ticketcard{
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    min-height:0;
+    position: relative;
+    :deep(.el-card__header){
+      padding: 0;
+    }
+    :deep(.el-card__body){
+      padding: 0;
+      .ticketForm{
+        display:flex;
+        flex-direction: row;
+        position: relative;
+
+      }
+      .save{
+        position: absolute;
+        left: 300px;
+        top: 0px;
+      }
+      .fileUpload{
+        margin: 10px 0;
+      }
+      .tablebox{
+        display:flex;
+        flex-direction: column;
+        &>span{
+          display:flex;
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 10px;
+          u{
+            color:#4080ff;
+            margin:0 5px;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  :deep(.el-card__body){
+    padding:0 15px 15px;
+    .item{
+      height: 100%;
+    }
+  }
+}
